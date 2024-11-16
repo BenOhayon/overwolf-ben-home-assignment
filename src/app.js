@@ -54,21 +54,21 @@ const countersData = [
 const fullSuiteData = [
     {
         src: `<svg>
-                <use href="#tools" />
+                <use href="./assets/images/icons.svg#tools" />
             </svg>`,
         title: "Developer SDK",
         content: "Integrate various features such as overlays and real-time alerts"
     },
     {
         src: `<svg>
-                <use href="#games" />
+                <use href="./assets/images/icons.svg#games" />
             </svg>`,
         title: "Game Event API",
         content: "Create apps that respond to in-game actions & events"
     },
     {
         src: `<svg>
-                <use href="#profit" />
+                <use href="./assets/images/icons.svg#profit" />
             </svg>`,
         title: "Monetization Tools",
         content: "Turn your app into revenue through ads & subscriptions"
