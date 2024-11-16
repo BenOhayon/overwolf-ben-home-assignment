@@ -1,0 +1,269 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    background-color: black;
+}
+
+body {
+    --header-height: 80px;
+
+    margin: 0;
+    font-family: Montserrat;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+  }
+  
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--header-height);
+}
+
+header {
+    box-sizing: border-box;
+    height: var(--header-height);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px 15px 16px;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    width: 155px;
+    height: 50px;
+}
+
+section {
+    width: 100vw;
+}
+
+.hero-titles {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: start;
+    margin-top: 110px;
+    width: calc(1396px * .70);
+}
+
+.hero-title {
+    color: #FFF;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 72px;
+    width: 60%;
+}
+
+.hero-subtitle {
+    color: var(--color-text-primary);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32px;
+    width: 60%;
+}
+
+.hero-down-arrow-container {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    animation-name: bounce-down;
+    animation-duration: 750ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+    cursor: pointer;
+    color: var(--color-text-primary);
+}
+
+.swiper {
+    width: 100%;
+}
+
+.hero-down-arrow {
+    width: 25px;
+    height: 25px;
+}
+
+@keyframes bounce-down {
+    from {
+        translate: 0 0;
+    }
+    to {
+        translate: 0 15px;
+    }
+}
+
+@keyframes bounce-up {
+    from {
+        translate: 0 0;
+    }
+    to {
+        translate: 0 -10px;
+    }
+}
+
+.about-overwolf {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.counters {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.overwolf-inspiration-video-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overwolf-inspiration-video {
+    width: 1117px;
+    aspect-ratio: 2;
+    margin: auto;
+}
+
+.overwolf-full-suite {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-to-top-button {
+    width: fit-content;
+    color: var(--color-text-primary);
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.hero-up-arrow-container {
+    width: 25px;
+    height: 25px;
+    animation-name: bounce-up;
+    animation-duration: 750ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+}
+
+.lower-logo {
+    margin: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+}
+
+#about {
+    scroll-margin-top: -20px;
+}
+
+@media screen and (width > 685px) {
+    .overwolf-slider-item:last-child {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (width <= 1120px) {
+    .hero-titles {
+        width: calc(1396px * 0.5);
+    }
+
+    .hero-title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+    .hero-subtitle {
+        font-size: 20px;
+    }
+}
+
+@media screen and (width <= 685px) {
+    .hero-titles {
+        align-items: center;
+        margin-top: 48px;
+        width: 100%;
+        margin: auto
+    }
+    
+    .hero-title {
+        color: #FFF;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 40px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero-subtitle {
+        color: var(--color-text-primary);
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .counters {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0px, 200px));
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+
+    .overwolf-full-suite {
+        flex-direction: column;
+    }
+
+    .overwolf-inspiration-video {
+        width: 100%;
+    }
+
+    .overwolf-inspiration-video-container {
+        width: calc(100vw - 40px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+}
