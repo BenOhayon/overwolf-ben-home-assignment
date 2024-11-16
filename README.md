@@ -9,3 +9,6 @@ This assignment consists of:
 - Running numbers with CountUp.js.
 - Scroll animations with AOS (Animation On Scroll).
 - Lottie animations via lottie-player and lottie JSONs.
+
+NOTE: In order to load the lottie JSONs properly, run index.html as a live server, otherwise, CORS error is thrown.
+You can do it using the VSCode extension "Live Server".
