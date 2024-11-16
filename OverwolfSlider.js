@@ -44,8 +44,6 @@
             }
 
             .overwolf-slider-arrow:hover {
-                /* translate: 0 -5px;
-                box-shadow: 0 0 5px 1px #cccccc; */
                 scale: 1.3;
             }
 
@@ -95,21 +93,13 @@
             shadow.append(template.content.cloneNode(true))
             this.slider = shadow.querySelector('.overwolf-slider')
             this.forwardButton = shadow.querySelector('.overwolf-slider-forward-arrow')
-            this.backwardButton = shadow.querySelector('.overwolf-slider-backward-arrow')
-            
-            if (isMobile) {
-                this.itemsGapPx = 20
-                this.slidingDeltaX = window.innerWidth + this.itemsGapPx
-            } else {
-                this.slidingDeltaX = 400
-                this.itemsGapPx = this.slider.style.gap
-            }
+            this.backwardButton = shadow.querySelector('.overwolf-slider-backward-arrow')   
         }
 
         checkForSlideDelta() {
-            if (window.innerWidth <= OVERWOLF_MOBILE_THRESHOLD) {
+            if (document.body.clientWidth <= OVERWOLF_MOBILE_THRESHOLD) {
                 this.itemsGapPx = 20
-                this.slidingDeltaX = window.innerWidth + this.itemsGapPx
+                this.slidingDeltaX = document.body.clientWidth + this.itemsGapPx
             } else {
                 this.slidingDeltaX = 400
                 this.itemsGapPx = this.slider.style.gap
@@ -135,6 +125,7 @@
                 this.checkForSlideDelta()
             })
             resizeObserver.observe(this.slider)
+            this.checkForSlideDelta()
         }
     }
     

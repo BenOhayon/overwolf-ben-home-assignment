@@ -10,10 +10,13 @@
                 gap: 40px;
                 align-items: start;
             }
+
+            .overwolf-slider-item:last-child {
+                padding-right: 20px;
+            }
                 
             .overwolf-slider-item-image {
                 width: 100%;
-                // height: 65%;
                 aspect-ratio: 1.2;
                 flex-shrink: 0;
                 object-fit: cover;
@@ -63,6 +66,10 @@
 
                 .overwolf-slider-item-image {
                     aspect-ratio: 1;
+                }
+
+                .overwolf-slider-item:last-child {
+                    padding-right: 15px;
                 }
             }
         </style>

@@ -10,6 +10,11 @@
                 gap: 8px;
                 align-items: center;
                 margin: auto;
+                transition: all 300ms ease-out;
+            }
+
+            .overwolf-counter:hover {
+                scale: 1.3;
             }
 
             .overwolf-counter-title {

@@ -12,6 +12,11 @@
                 align-items: start;
                 gap: 24px;
                 background-color: var(--color-surface-primary);
+                transition: all 300ms ease-out;
+            }
+
+            .container:hover {
+                translate: 0 -10px;
             }
 
             .container-titles {

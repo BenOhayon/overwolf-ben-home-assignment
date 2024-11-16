@@ -1,3 +1,4 @@
+window.resizeBy(-1, 0)
 AOS.init()
 const aboutData = [
     {
