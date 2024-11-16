@@ -1,2 +1,2 @@
 var OVERWOLF_MOBILE_THRESHOLD = 685
-var isMobile = window.innerWidth <= OVERWOLF_MOBILE_THRESHOLD
+var isMobile = document.body.clientWidth <= OVERWOLF_MOBILE_THRESHOLD

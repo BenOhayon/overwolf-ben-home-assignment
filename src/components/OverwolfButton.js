@@ -46,7 +46,7 @@
 
             if (![undefined, null].includes(stretch) || ![undefined, null].includes(applyStretchInMobile)) {
                 const resizeObserver = new ResizeObserver(() => {
-                    if (window.innerWidth <= OVERWOLF_MOBILE_THRESHOLD) {
+                    if (document.body.clientWidth <= OVERWOLF_MOBILE_THRESHOLD) {
                         if (applyStretchInMobile === 'true') {
                             this.style.width = '100%'
                             this.button.classList.add('stretch')

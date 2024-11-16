@@ -1,4 +1,3 @@
-window.resizeBy(-1, 0)
 AOS.init()
 const aboutData = [
     {
@@ -186,11 +185,3 @@ successStoriesData.forEach(successStoryObj => {
     successStoryEl.setAttribute('content', successStoryObj.content)
     successStoriesSlider.appendChild(successStoryEl)
 })
-
-const resizeObserver = new ResizeObserver(() => {
-    if (window.innerWidth <= OVERWOLF_MOBILE_THRESHOLD) {
-        countersContentEl.style.gridTemplateColumns = `repeat(2, ${(countersContentEl.innerWidth - `${countersContentEl.style.gap}px`) / 2})`
-    }
-})
-
-resizeObserver.observe(main)
